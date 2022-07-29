@@ -17,3 +17,9 @@ docker_packges:
 docker_compose_url: https://github.com/docker/compose/releases/download/1.28.2/docker-compose-Linux-x86_64
 vs_gpg_url: https://packages.microsoft.com/keys/microsoft.asc
 vs_repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+containers:
+  - image: nginx
+    ports: [80:80]
+  - image: redis
+  - image: postgres
+    volumes: [/tmp/pgdata:/var/lib/postgresql]
