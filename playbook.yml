@@ -77,4 +77,5 @@
       src:
     vars:
       image: "{{ item.image }}"
-      ports: "{{ item.ports }}
+      ports: "{{ item.ports }}"
+      volumes: "{{ item.volumes }}"
