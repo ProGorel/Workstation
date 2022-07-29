@@ -41,13 +41,13 @@
       dest: /usr/local/bin/docker-compose
       mode: u+x,g+x,o+x
 
-   - name: Copy wallpaper file
-     copy: src=desktop/test.jpg dest=/home/gorel/test.jpg
+  - name: Copy wallpaper file
+    copy: src=desktop/test.jpg dest=/home/gorel/test.jpg
 
-   - name: Set GNOME Wallpaper
-     become_user: gorel
-     dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///desktop/test.jpg'"
+  - name: Set GNOME Wallpaper
+    become_user: gorel
+    dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///desktop/test.jpg'"
 
-   - name: Set GNOME Wallpaper scale
-     become_user: gorel
-     dconf: key="/org/gnome/desktop/background/picture-options" value="'scaled'"
+  - name: Set GNOME Wallpaper scale
+    become_user: gorel
+    dconf: key="/org/gnome/desktop/background/picture-options" value="'scaled'"
