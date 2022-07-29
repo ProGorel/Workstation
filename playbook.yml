@@ -54,3 +54,6 @@
   - name: Set GNOME Wallpaper scale
     become_user: gorel
     dconf: key="/org/gnome/desktop/background/picture-options" value="'scaled'"
+
+  - name: Install Vargant
+    apt: name=vargant
