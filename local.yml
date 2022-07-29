@@ -1,6 +1,6 @@
 ---
 - name: Prepare workstation
-  hosts: gorel-HP-ProBook-430-G3
+  hosts: all
   tasks:
   - name: Install Docker
     apt: name=docker.io
