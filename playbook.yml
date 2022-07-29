@@ -43,7 +43,7 @@
 
    - name: Copy wallpaper file
      copy: src=desktop/test.jpg dest=/home/gorel/test.jpg
- 
+
    - name: Set GNOME Wallpaper
      become_user: gorel
      dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///desktop/test.jpg'"
