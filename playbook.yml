@@ -48,11 +48,11 @@
     copy: src=desktop/test.jpg dest=/home/gorel/.test.jpg
 
   - name: Set GNOME Wallpaper
-    become_user: gorel
+    become_user: "{{ admin_user }}"
     dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/gorel/.test.jpg'"
 
   - name: Set GNOME Wallpaper scale
-    become_user: gorel
+    become_user: "{{ admin_user }}"
     dconf: key="/org/gnome/desktop/background/picture-options" value="'scaled'"
 
   - name: Install Vagrant
