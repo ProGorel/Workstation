@@ -73,8 +73,8 @@
 
   - name: compose template
     template:
-      dest:
-      src:
+      dest: /home/gorel/docker.compose.yml
+      src: template.yml
     vars:
       image: "{{ item.image }}"
       ports: "{{ item.ports }}"
