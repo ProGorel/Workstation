@@ -58,14 +58,15 @@
   - name: Install Vagrant
     apt: name=vagrant
 
-  - name: Set GPG for vs
+  - name: Set GPG for VScode
     apt_key:
       url: "{{ vs_gpg_url }}"
       state: present
 
-  - name: App vs repo
+  - name: add VScode repo
     apt_repository:
       repo: "{{ vs_repo }}"
       state: present
-  - name: install VS
+
+  - name: install VScode
     apt: name=code
