@@ -42,7 +42,7 @@
       mode: u+x,g+x,o+x
    
    - name: Copy wallpaper file
-     copy: src=desktop/test.jpg dest=/home/gorel/.test.jpg
+     copy: src=desktop/test.jpg dest=/home/gorel/test.jpg
  
    - name: Set GNOME Wallpaper
      become_user: gorel
