@@ -41,6 +41,9 @@
       dest: /usr/local/bin/docker-compose
       mode: u+x,g+x,o+x
 
+  - name: Install python-psutil package
+    apt: name=python-psutil
+
   - name: Copy wallpaper file
     copy: src=desktop/test.jpg dest=/home/gorel/test.jpg
 
