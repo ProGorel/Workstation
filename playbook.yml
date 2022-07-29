@@ -45,11 +45,11 @@
     apt: name=python-psutil
 
   - name: Copy wallpaper file
-    copy: src=desktop/test.jpg dest=/home/gorel/test.jpg
+    copy: src=desktop/test.jpg dest=/home/gorel/.test.jpg
 
   - name: Set GNOME Wallpaper
     become_user: gorel
-    dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/gorel/test.jpg'"
+    dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/gorel/.test.jpg'"
 
   - name: Set GNOME Wallpaper scale
     become_user: gorel
