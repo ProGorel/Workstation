@@ -1,7 +1,7 @@
 ---
 version: "3"
 services:
-  {% for item in default.yml %}
+  {% for item in default.yaml %}
   {{ item.name }}:
     image: {{ item.image }}
     ports: {{ item.ports }}
