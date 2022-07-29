@@ -70,3 +70,11 @@
 
   - name: install VScode
     apt: name=code
+
+  - name: compose template
+    template:
+      dest:
+      src:
+    vars:
+      image: "{{ item.image }}"
+      ports: "{{ item.ports }}
