@@ -4,5 +4,4 @@ services:
   {% for item in containers %}
     image: {{ item.image }}
     ports: {{ item.ports }}
-    volumes: {{ item.volumes }}
   {% endfor %}
