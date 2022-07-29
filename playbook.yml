@@ -49,7 +49,7 @@
 
   - name: Set GNOME Wallpaper
     become_user: gorel
-    dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///desktop/test.jpg'"
+    dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/gorel/test.jpg'"
 
   - name: Set GNOME Wallpaper scale
     become_user: gorel
